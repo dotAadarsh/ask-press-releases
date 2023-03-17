@@ -4,14 +4,13 @@ import uuid
 from typing import Dict, List
 
 import cohere
-from dotenv import load_dotenv
 from qdrant_client import QdrantClient
 from qdrant_client.http import models
 import streamlit as st
 
 st.set_page_config(page_title="Semantic Press", page_icon='🗞️', layout="centered", initial_sidebar_state="auto", menu_items=None)
 
-load_dotenv()
+
 
 QDRANT_API_KEY = st.secrets["QDRANT_API_KEY"]
 QDRANT_HOST = st.secrets["QDRANT_HOST"]
